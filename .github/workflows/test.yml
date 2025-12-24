@@ -6,4 +6,4 @@ jobs:
        - name: Checkout code
          uses: actions/checkout@v4
        - name: Run simple command
-         run: echo "Workflow uspešno zagnan na Linux self-hosted runnerju" && 
+         run: echo "Workflow uspešno zagnan na Linux self-hosted runnerju"
