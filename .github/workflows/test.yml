@@ -1,0 +1,16 @@
+          name: Simple Run on Self-Hosted
+     on: [push, pull_request]
+     jobs:
+       run:
+         runs-on: self-hosted  # Uporabi vaš Linux runner
+         steps:
+           - name: Checkout code
+             uses: actions/checkout@v4
+           - name: Set up Python
+             uses: actions/setup-python@v4
+             with:
+               python-version: '3.8'
+           - name: Install dependencies
+             run: pip install numpy pyproj  # Enostavna namestitev brez requirements.txt
+           - name: Run simple command
+             run: echo "Workflow uspešno zagnan na Linux self-hosted runnerju" && python --version && ls -la
