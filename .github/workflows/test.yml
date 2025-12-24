@@ -5,5 +5,7 @@ jobs:
      steps:
        - name: Checkout code
          uses: actions/checkout@v4
+       - name: Proba
+         run: cd /home/kristof/Documents/IJS/ && touch lol.txt
        - name: Run simple command
          run: echo "Workflow uspešno zagnan na Linux self-hosted runnerju"
