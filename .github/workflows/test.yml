@@ -1,7 +1,7 @@
 on: [push, pull_request]
 jobs:
    run:
-     runs-on: self-hosted
+     runs-on: [self-hosted, vm]
      steps:
        - name: Checkout code
          uses: actions/checkout@v4
